@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/menusplugin/menus.gd" type="Script" id=1]
+[ext_resource path="res://MenusDemo.gd" type="Script" id=2]
+[ext_resource path="res://Wooden Train Whistle.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Campfire - Telecasted.mp3" type="AudioStream" id=4]
+[ext_resource path="res://image.png" type="Texture" id=5]
+
+[node name="Control" type="Control"]
+margin_right = 1311.0
+margin_bottom = 721.0
+script = ExtResource( 2 )
+
+[node name="Menus" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+texture = ExtResource( 5 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "Music"
+
+[node name="Sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Sfx"
